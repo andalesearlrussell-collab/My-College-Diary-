@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My College Diary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>My College <span>Diary</span></h1>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="diary.html">Diary</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero-grid">
+    <div>
+      <p class="eyebrow">BSIT · 1st Year</p>
+      <h1 class="page-title">Welcome to <em>my journey</em></h1>
+      <p class="hero-intro" id="intro">
+        Hello! I'm Earl Russell Andales, a BSIT student sharing my college journey — one entry at a time.
+      </p>
+      <button class="btn-primary" onclick="revealIntro()">My journey →</button>
+    </div>
+    <div>
+      <div class="book-art">
+        <span class="book-tag">My Colledge Diary</span>
+        <div class="book-lines">
+          <div class="line"></div>
+          <div class="line short"></div>
+          <div class="line"></div>
+          <div class="line shorter"></div>
+          <div class="line"></div>
+          <div class="line short"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line shorter"></div>
+          <div class="line short"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <div class="quick-grid">
+    <a class="quick-card" href="diary.html">
+      <span class="icon">📖</span>
+      <span class="title">Diary entries</span>
+      <span class="desc">Thoughts from my college life</span>
+    </a>
+    <a class="quick-card" href="gallery.html">
+      <span class="icon">🖼️</span>
+      <span class="title">Gallery</span>
+      <span class="desc">Moments and memories</span>
+    </a>
+    <a class="quick-card" href="about.html">
+      <span class="icon">👤</span>
+      <span class="title">About me</span>
+      <span class="desc">Who I am and what I study</span>
+    </a>
+    <a class="quick-card" href="contact.html">
+      <span class="icon">✉️</span>
+      <span class="title">Contact</span>
+      <span class="desc">Say hello</span>
+    </a>
+  </div>
+</main>
+
+<script>
+  function revealIntro() {
+    const el = document.getElementById('intro');
+    el.style.transition = 'opacity 0.3s';
+    el.style.opacity = '0';
+    setTimeout(() => {
+      el.textContent = 'Welcome to my personal college diary — a space where I document every milestone, struggle, and memory of my BSIT journey.';
+      el.style.opacity = '1';
+    }, 300);
+  }
+</script>
+
+</body>
+</html>
