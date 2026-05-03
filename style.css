@@ -7,17 +7,17 @@
 }
 
 :root {
-  --bg:        #0f0f1a;
-  --surface:   #1a1a2e;
-  --surface2:  #1e1e32;
-  --border:    #2a2a4a;
-  --border2:   #3a3a5a;
-  --accent:    #f97316;
-  --accent-bg: rgba(249, 115, 22, 0.1);
-  --accent-br: rgba(249, 115, 22, 0.3);
+  --bg:        #12001f;
+  --surface:   #1a0030;
+  --surface2:  #1f0038;
+  --border:    #2d0050;
+  --border2:   #3d0068;
+  --accent:    #00e5ff;
+  --accent-bg: rgba(0, 229, 255, 0.08);
+  --accent-br: rgba(0, 229, 255, 0.3);
   --white:     #ffffff;
   --text:      #ffffff;
-  --text-muted:#a0a0b8;
+  --text-muted:#9b9bbb;
   --text-faint:#6b6b8a;
 }
 
@@ -139,7 +139,7 @@ hr.divider {
   padding: 10px 20px;
   border-radius: 8px;
   background: var(--accent);
-  color: #fff;
+  color: var(--bg);
   border: none;
   cursor: pointer;
   transition: opacity 0.15s;
@@ -205,33 +205,7 @@ hr.divider {
 .book-lines { display: flex; flex-direction: column; gap: 8px; }
 .book-lines .line { height: 1px; background: var(--border); }
 .book-lines .line.short  { width: 65%; }
-.book-lines .line.shorter{ width: 40%; }
-
-/* ── QUICK CARDS ── */
-.quick-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 10px;
-}
-
-.quick-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1rem 1.1rem;
-  text-decoration: none;
-  display: block;
-  transition: all 0.15s;
-}
-
-.quick-card:hover {
-  border-color: var(--accent);
-  background: #1f1f38;
-}
-
-.quick-card .icon  { font-size: 14px; margin-bottom: 6px; display: block; }
-.quick-card .title { font-size: 13px; font-weight: 500; color: var(--white); display: block; }
-.quick-card .desc  { font-size: 12px; color: var(--text-faint); margin-top: 3px; line-height: 1.4; display: block; }
+.book-lines .line.shorter { width: 40%; }
 
 /* ── DIARY ENTRIES ── */
 .entry {
@@ -315,12 +289,12 @@ hr.divider {
   justify-content: center;
   font-size: 15px;
   font-weight: 700;
-  color: #fff;
+  color: var(--bg);
   margin-bottom: 1rem;
 }
 
 .about-name  { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; color: var(--white); }
-.about-course{ font-size: 13px; color: var(--text-faint); margin-top: 2px; margin-bottom: 1rem; }
+.about-course { font-size: 13px; color: var(--text-faint); margin-top: 2px; margin-bottom: 1rem; }
 
 .about-row {
   display: flex;
@@ -365,7 +339,7 @@ hr.divider {
   justify-content: center;
   font-size: 13px;
   font-weight: 700;
-  color: #fff;
+  color: var(--bg);
   flex-shrink: 0;
 }
 
@@ -391,3 +365,29 @@ hr.divider {
   .hero-grid { grid-template-columns: 1fr; }
   .book-art  { display: none; }
 }
+
+/* ── QUICK CARDS ── */
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 10px;
+}
+
+.quick-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  display: block;
+  transition: all 0.15s;
+}
+
+.quick-card:hover {
+  border-color: var(--accent);
+  background: #1f0038;
+}
+
+.quick-card .icon  { font-size: 14px; margin-bottom: 6px; display: block; }
+.quick-card .title { font-size: 13px; font-weight: 500; color: var(--white); display: block; }
+.quick-card .desc  { font-size: 12px; color: var(--text-faint); margin-top: 3px; line-height: 1.4; display: block; }
